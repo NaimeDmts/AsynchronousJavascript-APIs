@@ -11,17 +11,15 @@
 </head>
 <body>
     
-    <script>
-        const request = new XMLHttpRequest();
-        request.open('GET', 'https://restcountries.com/v3.1/name/turkey');
-        request.send();
+    <div class="container my-3">
+        <div class="row">
 
-        request.addEventListener('load', function(){
-            const data = this.responseText;
-            console.log(typeof data);
-            //string to json
-            
-        });
-    </script>
+        </div>
+    </div>
+    <script src="4_ajax.js"></script>
+    <script src="4_json.js"></script>
+   
+
 </body>
+
 </html>
