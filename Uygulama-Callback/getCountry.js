@@ -1,4 +1,4 @@
-const displayCountry = (country) => {
+const getCountry = (country) => {
     const request = new XMLHttpRequest();
 
     request.open('GET', 'https://restcountries.com/v3.1/name/'+ country);
@@ -8,7 +8,7 @@ const displayCountry = (country) => {
     request.addEventListener('load', function() {
         const data = JSON.parse(this.responseText);
         console.log(data[0]);            
-        setCountry(data);   
+        renderCountry(data[0]);   
         
         const countries = data[0].borders.toString();
         
@@ -18,7 +18,7 @@ const displayCountry = (country) => {
 
         req.addEventListener('load', function(){
             const data = JSON.parse(this.responseText);
-            setCountry(data);
+            renderNeighbors(data);
         })
     });
 }
