@@ -13,6 +13,7 @@
 <body>
     
     <div class="container my-5">
+        <div id="errors"></div>
         <div class="card mb-3">
             <div class="card-body">
                 <div class="input-group">
@@ -21,20 +22,29 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3" id="country-details">
-        </div>
-        <div class="card mb-3">
-            <div class="card-header">Komşu Ülkeler</div>
-            <div class="card-body ">
-                <div class="row" id="neighbors">
-
+        <div id="details">
+            <div class="card mb-3" >
+                <div class="card-header">Arama Sonucu</div>
+                <div class="card-body ">
+                    <div class="row" id="country-details">
+    
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header">Komşu Ülkeler</div>
+                <div class="card-body ">
+                    <div class="row" id="neighbors">
+    
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script src="getCountry.js"></script>
     <script src="renderCountry.js"></script>
     <script src="neighbors.js"></script>
+    <script src="renderError.js"></script>
 </body>
 </html>

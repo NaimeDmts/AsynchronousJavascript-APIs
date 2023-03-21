@@ -11,9 +11,6 @@ const renderNeighbors = (data) => {
                 </div>
             </div>
         `;
-       
     }
     document.getElementById('neighbors').innerHTML= html;
 }
-
-
