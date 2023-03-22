@@ -1,4 +1,5 @@
 const renderError = (err) =>{
+    document.querySelector('#loading').style.display ="none";
     const html = `
         <div class="alert alert-danger">
             ${err.message}

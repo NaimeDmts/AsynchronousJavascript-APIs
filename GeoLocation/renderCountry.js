@@ -1,4 +1,5 @@
 const renderCountry = (data) =>{
+    document.querySelector('#loading').style.display ="none";
     document.querySelector("#country-details").innerHTML = "";
     document.querySelector("#neighbors").innerHTML = "";
 
@@ -33,5 +34,6 @@ const renderCountry = (data) =>{
 document.getElementById('btnSearch').addEventListener('click', ()=> {
     let text = document.getElementById('txtSearch').value;
     document.querySelector("#details").style.opacity = 0;
+    document.querySelector('#loading').style.display ="block";
     getCountry(text);
 });

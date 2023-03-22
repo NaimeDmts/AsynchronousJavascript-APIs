@@ -1,10 +1,12 @@
 document.getElementById('btnLocation').addEventListener('click',()=>{
     if(navigator.geolocation){
+        document.querySelector('#loading').style.display ="block";
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 });
 function onError(err){
     console.log(err);
+    document.querySelector('#loading').style.display ="none";
 }
 async function onSuccess(position){
     let lat = position.coords.latitude;

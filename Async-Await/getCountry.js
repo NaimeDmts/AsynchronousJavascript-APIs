@@ -14,6 +14,7 @@ async function getCountry(country){
         renderNeighbors(neighbors)
     }
     catch (err){
+        document.querySelector('#loading').style.display ="none";
         renderError(err);
     }
 }
